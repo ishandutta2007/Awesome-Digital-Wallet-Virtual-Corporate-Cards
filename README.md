@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Digital-Wallet-Virtual-Corporate-Cards" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -70,7 +70,7 @@ The industry exhibits a distinctive **bifurcated structure**:
 
 *Ranked in descending order by GitHub stargazers count.*
 
-| Project | GitHub Stars Badge | Description & Capabilities | Tech Stack |
+| Project | GitHub_Stars_Badge | Description & Capabilities | Tech Stack |
 |---------|-------------------|----------------------------|------------|
 | **[Maybe Finance](https://github.com/maybe-finance/maybe)** | [![Stars](https://img.shields.io/github/stars/maybe-finance/maybe?style=social&color=white)](https://github.com/maybe-finance/maybe/stargazers) | Modern, beautifully crafted personal and business financial operating system. Features multi-account synchronization, asset management, automated transaction categorization, and deep financial analytics. | Ruby on Rails, Hotwire, PostgreSQL |
 | **[Actual Budget](https://github.com/actualbudget/actual)** | [![Stars](https://img.shields.io/github/stars/actualbudget/actual?style=social&color=white)](https://github.com/actualbudget/actual/stargazers) | Super-fast, privacy-first local personal and organizational budgeting system. Implements zero-based envelope budgeting, end-to-end encryption, multi-device synchronization, and bank statement import automation. | TypeScript, React, Node.js, SQLite |
