@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0b132b" />
+      <stop offset="100%" stop-color="#1c1335" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Filters for Glow & Shadows -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="cardGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="neon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes floatCard1 {
+      0%, 100% { transform: translateY(0px) rotate(-8deg); }
+      50% { transform: translateY(-16px) rotate(-6deg); }
+    }
+    @keyframes floatCard2 {
+      0%, 100% { transform: translateY(0px) rotate(10deg); }
+      50% { transform: translateY(14px) rotate(12deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.08); }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes pillFloat1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes pillFloat2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+    .card-1 {
+      animation: floatCard1 7s ease-in-out infinite;
+      transform-origin: 980px 170px;
+    }
+    .card-2 {
+      animation: floatCard2 8s ease-in-out infinite;
+      transform-origin: 1040px 240px;
+    }
+    .glow-orb-1 {
+      animation: pulseGlow 6s ease-in-out infinite;
+      transform-origin: 960px 180px;
+    }
+    .glow-orb-2 {
+      animation: pulseGlow 8s ease-in-out infinite;
+      transform-origin: 200px 300px;
+    }
+    .flow-path {
+      stroke-dasharray: 12, 12;
+      animation: flowLine 25s linear infinite;
+    }
+    .pill-1 {
+      animation: pillFloat1 5s ease-in-out infinite;
+    }
+    .pill-2 {
+      animation: pillFloat2 6s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="420" rx="16" fill="url(#grid)" />
+
+  <!-- Animated Ambient Glow Orbs in Background -->
+  <circle class="glow-orb-1" cx="980" cy="190" r="180" fill="#6366f1" opacity="0.4" filter="url(#cardGlow)" />
+  <circle class="glow-orb-2" cx="240" cy="320" r="140" fill="#06b6d4" opacity="0.25" filter="url(#cardGlow)" />
+  <circle cx="600" cy="60" r="120" fill="#a855f7" opacity="0.2" filter="url(#cardGlow)" />
+
+  <!-- Flow Circuit Lines behind foreground content -->
+  <path class="flow-path" d="M 0 100 Q 300 160 600 80 T 1200 140" fill="none" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="2" />
+  <path class="flow-path" d="M 0 340 Q 350 260 700 360 T 1200 280" fill="none" stroke="#818cf8" stroke-opacity="0.2" stroke-width="2" />
+
+  <!-- Dynamic / Animated Virtual Cards (Right side decorative background) -->
+  <g class="card-2" filter="url(#shadow)">
+    <!-- Cyan/Blue Virtual Card -->
+    <rect x="910" y="150" width="240" height="150" rx="14" fill="url(#cardGrad2)" stroke="#93c5fd" stroke-opacity="0.4" stroke-width="1.5" />
+    <!-- Chip -->
+    <rect x="935" y="180" width="34" height="26" rx="5" fill="url(#goldGrad)" opacity="0.9" />
+    <circle cx="1110" cy="180" r="14" fill="#ffffff" fill-opacity="0.3" />
+    <circle cx="1124" cy="180" r="14" fill="#ffffff" fill-opacity="0.3" />
+    <!-- Card Number Mock -->
+    <text x="935" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#ffffff" opacity="0.9" letter-spacing="2">••••  ••••  ••••  8842</text>
+    <text x="935" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#ffffff" opacity="0.8" letter-spacing="1">VIRTUAL EXPENSE</text>
+    <text x="1100" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#e0f2fe" opacity="0.75">11/29</text>
+  </g>
+
+  <g class="card-1" filter="url(#shadow)">
+    <!-- Purple/Indigo Corporate Card -->
+    <rect x="850" y="90" width="250" height="155" rx="14" fill="url(#cardGrad1)" stroke="#c4b5fd" stroke-opacity="0.5" stroke-width="1.5" />
+    <!-- EMV Chip -->
+    <rect x="878" y="122" width="36" height="28" rx="5" fill="url(#goldGrad)" />
+    <!-- Contactless Wave Icon -->
+    <path d="M 926 128 A 12 12 0 0 1 926 144 M 932 124 A 18 18 0 0 1 932 148 M 938 120 A 24 24 0 0 1 938 152" fill="none" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1.8" stroke-linecap="round" />
+    <!-- Mastercard-like Circles -->
+    <circle cx="1045" cy="130" r="16" fill="#f43f5e" fill-opacity="0.75" />
+    <circle cx="1063" cy="130" r="16" fill="#fbbf24" fill-opacity="0.75" />
+    <!-- Numbers -->
+    <text x="878" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff" font-weight="600" letter-spacing="2.5">••••  ••••  ••••  4096</text>
+    <text x="878" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#ffffff" letter-spacing="1.2">CORPORATE SPEND</text>
+    <text x="1048" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ddd6fe">EXP 08/30</text>
+  </g>
+
+  <!-- Foreground Title, Badges & Content (Remains sharp and in foreground) -->
+  <g transform="translate(60, 0)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 56)">
+      <rect x="0" y="0" width="280" height="32" rx="16" fill="#1e1b4b" stroke="#6366f1" stroke-opacity="0.6" stroke-width="1.2" />
+      <circle cx="16" cy="16" r="5" fill="#10b981" />
+      <text x="30" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" letter-spacing="0.8">FINTECH &amp; SPEND MANAGEMENT</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Awesome Digital Wallets &amp;
+    </text>
+    <text x="0" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="800" fill="url(#glowGrad)" letter-spacing="-0.5">
+      Virtual Corporate Cards
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="234" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400" fill="#94a3b8" letter-spacing="0.2">
+      Curated guide to SaaS platforms, BaaS card issuance APIs, and open-source financial ledgers.
+    </text>
+
+    <!-- Interactive/Feature Badges (Pills) -->
+    <g class="pill-1" transform="translate(0, 276)">
+      <!-- Pill 1: Virtual Card Issuance -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="36" rx="18" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="22.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#7dd3fc" text-anchor="middle">💳 Virtual Card Issuance</text>
+      </g>
+      <!-- Pill 2: Spend Management -->
+      <g transform="translate(192, 0)">
+        <rect width="180" height="36" rx="18" fill="#0f172a" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="22.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle">📊 Spend Automation</text>
+      </g>
+      <!-- Pill 3: Self-Hosted Ledgers -->
+      <g transform="translate(384, 0)">
+        <rect width="180" height="36" rx="18" fill="#0f172a" stroke="#34d399" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="22.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#6ee7b7" text-anchor="middle">⚡ Open-Source Ledgers</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metrics Bar -->
+    <g transform="translate(0, 345)">
+      <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">
+        ⭐ Real-Time Star Tracking &nbsp;•&nbsp; 💰 Starting Tier Pricing &nbsp;•&nbsp; 🎁 Verified Free Tier Limits
+      </text>
+    </g>
+  </g>
+</svg>
